@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Ses Kayıt</string>
+    <string name="accessibility_desc">Arama kayıtlarında karşı tarafın sesinin daha iyi alınmasına yardımcı olur. Ekran içeriğini okumaz.</string>
+</resources>

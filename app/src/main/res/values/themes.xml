@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.SesKayit" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#1E3A5F</item>
+    </style>
+</resources>
