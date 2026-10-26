@@ -110,6 +110,15 @@ fun PermissionsScreen() {
             if (Build.VERSION.SDK_INT >= 33) CallUtils.has(context, Manifest.permission.POST_NOTIFICATIONS) else true) {
             if (Build.VERSION.SDK_INT >= 33) launcher.launch(arrayOf(Manifest.permission.POST_NOTIFICATIONS))
         })
+        add(PermItem("Diğer uygulamaların üzerinde göster (ÖNEMLİ)",
+            "Otomatik kayıt için en kritik izin. Android 12+ bu izin olmadan arama sırasında mikrofonu arka planda açmaya izin vermez.",
+            Settings.canDrawOverlays(context)) {
+            tryStart(
+                context,
+                Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:${context.packageName}")),
+                Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION),
+            )
+        })
         add(PermItem("WhatsApp için bildirim erişimi", "WhatsApp aramalarını bildirimlerden algılamak için",
             NotificationManagerCompat.getEnabledListenerPackages(context).contains(context.packageName)) {
             tryStart(context, Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS))
@@ -132,6 +141,16 @@ fun PermissionsScreen() {
             tryStart(
                 context,
                 Intent().setComponent(ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity")),
+                Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:${context.packageName}")),
+            )
+        })
+        add(PermItem("Xiaomi: Arka planda açılır pencere (Diğer izinler)",
+            "Uygulama bilgisi > Diğer izinler > \"Arka planda çalışırken açılır pencere göster\" açık olmalı (HyperOS, denetlenemez)", null) {
+            tryStart(
+                context,
+                Intent("miui.intent.action.APP_PERM_EDITOR")
+                    .setClassName("com.miui.securitycenter", "com.miui.permcenter.permissions.PermissionsEditorActivity")
+                    .putExtra("extra_pkgname", context.packageName),
                 Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:${context.packageName}")),
             )
         })

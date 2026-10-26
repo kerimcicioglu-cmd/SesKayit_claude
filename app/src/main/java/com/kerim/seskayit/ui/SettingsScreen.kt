@@ -130,8 +130,6 @@ fun SettingsScreen(vm: AppViewModel) {
         Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
-        Text("Ayarlar", style = MaterialTheme.typography.titleLarge)
-
         SectionTitle("Otomatik Kayıt")
         SwitchRow("Telefon aramalarını kaydet", "Gelen/giden GSM aramaları", autoPhone) {
             autoPhone = it; prefs.autoRecordPhone = it

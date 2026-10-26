@@ -1,8 +1,15 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp" android:height="108dp"
     android:viewportWidth="108" android:viewportHeight="108">
-    <path android:fillColor="#FFFFFF"
-        android:pathData="M54,30c-5,0 -9,4 -9,9v16c0,5 4,9 9,9s9,-4 9,-9V39c0,-5 -4,-9 -9,-9z"/>
-    <path android:fillColor="#FFFFFF"
-        android:pathData="M71,54h-4c0,7.2 -5.8,13 -13,13s-13,-5.8 -13,-13h-4c0,8.7 6.5,15.8 15,16.9V78h4v-7.1c8.5,-1.1 15,-8.2 15,-16.9z"/>
+    <!-- Mikrofon gövdesi -->
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M54,34m-9,0a9,9 0,1 1,18 0l0,15a9,9 0,1 1,-18 0z"/>
+    <!-- Mikrofon tabanı -->
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M69,49h-4c0,6.1 -4.9,11 -11,11s-11,-4.9 -11,-11h-4c0,7.6 5.5,13.9 13,14.8V70h4v-6.2c7.5,-0.9 13,-7.2 13,-14.8z"/>
+    <!-- Ses dalgaları -->
+    <path android:strokeColor="#CCFFFFFF" android:strokeWidth="3" android:strokeLineCap="round"
+        android:pathData="M33,41 A14,14 0,0 0,33 57"/>
+    <path android:strokeColor="#99FFFFFF" android:strokeWidth="3" android:strokeLineCap="round"
+        android:pathData="M75,41 A14,14 0,0 1,75 57"/>
 </vector>

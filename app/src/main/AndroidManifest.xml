@@ -10,6 +10,9 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <!-- Android 12+ : overlay izni, uygulamanın arka plandan (arama geldiğinde) mikrofon ön plan
+         servisini başlatmasına ve mikrofona "kullanımdayken" erişmesine izin verir. Otomatik kayıt için kritik. -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application

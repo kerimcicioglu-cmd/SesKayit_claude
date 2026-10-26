@@ -20,6 +20,7 @@ Klasörü Android Studio ile açın → *Build > Build APK(s)*. Komut satırınd
 ## İlk kurulum (Xiaomi / HyperOS için önemli)
 Uygulamada **İzinler** sekmesine girip tüm maddeleri yeşile çevirin:
 - Mikrofon, Telefon durumu, Arama kayıtları, Rehber, Bildirim
+- **Diğer uygulamaların üzerinde göster** (EN KRİTİK — bu izin olmadan Android 12+ arama sırasında mikrofonu arka planda açtırmaz, otomatik kayıt çalışmaz)
 - **WhatsApp için bildirim erişimi** (WhatsApp aramalarını algılamak için şart)
 - **Pil optimizasyonundan muafiyet** + Xiaomi **Otomatik başlatma** + Pil tasarrufu **“Kısıtlama yok”**
 - **Erişilebilirlik servisi** (önerilir — görüşme sırasında mikrofon erişimini kolaylaştırır)
